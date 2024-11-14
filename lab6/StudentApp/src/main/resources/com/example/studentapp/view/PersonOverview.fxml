@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.layout.HBox?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.studentapp.view.PersonOverviewController">
+    <SplitPane prefWidth="600.0" prefHeight="400.0">
+        <!-- Таблица студентов -->
+        <TableView fx:id="personTable">
+            <columns>
+                <TableColumn fx:id="firstNameColumn" text="First Name" prefWidth="150.0" />
+                <TableColumn fx:id="lastNameColumn" text="Last Name" prefWidth="150.0" />
+                <TableColumn fx:id="groupCodeColumn" text="Group Code" prefWidth="100.0" />
+                <TableColumn fx:id="emailColumn" text="Email" prefWidth="200.0" />
+                <TableColumn fx:id="ageColumn" text="Age" prefWidth="80.0" />
+                <TableColumn fx:id="gpaColumn" text="GPA" prefWidth="80.0" />
+            </columns>
+        </TableView>
+
+        <!-- Детали студента -->
+        <AnchorPane>
+            <GridPane layoutX="10.0" layoutY="10.0">
+                <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label fx:id="firstNameLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label fx:id="lastNameLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Group Code:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label fx:id="groupCodeLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Birthday:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label fx:id="birthdayLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </GridPane>
+
+            <HBox layoutX="10.0" layoutY="200.0" spacing="10.0">
+                <Button text="Delete" onAction="#handleDeletePerson" />
+                <Button text="Edit" onAction="#handleEditPerson" />
+                <Button text="New" onAction="#handleNewPerson" />
+            </HBox>
+
+        </AnchorPane>
+    </SplitPane>
+</AnchorPane>

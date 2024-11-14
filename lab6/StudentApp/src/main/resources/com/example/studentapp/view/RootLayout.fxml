@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.studentapp.view.RootLayoutController">
+    <!-- Верхняя панель с меню -->
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="New..." onAction="#handleNew" />
+                <MenuItem text="Save" onAction="#handleSave" />
+                <MenuItem text="Exit" onAction="#handleExit" />
+            </Menu>
+            <Menu text="Edit">
+                <MenuItem text="Edit Person" onAction="#handleEditPerson" />
+                <MenuItem text="Delete Person" onAction="#handleDeletePerson" />
+            </Menu>
+            <Menu text="Help">
+                <MenuItem text="About" onAction="#handleAbout" />
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- Центральная область будет заменена содержимым из PersonOverview.fxml -->
+    <center />
+</BorderPane>
